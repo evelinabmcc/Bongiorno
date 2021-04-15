@@ -1,0 +1,171 @@
+/*
+    Authors: Ryan Paul, 
+             Taruna Mangar,
+             Evelina Iliescu-Natsasiu.
+
+     Theme:  Restaurant Online Food Ordering  
+
+     Project: CSS style sheet
+     
+     Date: 04.10.21
+*/
+
+/* General CSS*/
+
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    border: 1px solid green;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+
+}
+
+.img-responsive{
+    width: 100%;
+    /* height: 100%; */
+}
+
+.img-curve{
+    border-radius: 10px;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+a{
+    color:rgb(12, 73, 12);
+    text-decoration: none;
+}
+
+a:hover{
+    color: green;
+}
+
+.button{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    background-color: rgb(12, 73, 12) ;
+    color: white;
+    cursor: pointer;
+    border-radius: 5%;
+}
+
+.button:hover{
+    color: green;
+}
+
+/* CSS for Navbar Section*/
+
+.logo{
+    border: 1px solid rgb(10, 17, 31);
+    width: 15%;
+    float: left;
+}
+
+.menu{
+    line-height: 130px;  
+}
+
+.menu ul{
+     list-style-type: none;
+}
+
+.menu ul li{
+    display: inline; 
+    padding: 1%; 
+    font-weight: bold;
+}
+
+
+/* CSS for Search Bar Section */
+
+ .searchBar{
+    background-image: url(../images/background/Background-Pasta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;    
+    background-position: center; 
+    padding: 7% 0;
+    border-radius: 5%;
+}
+
+.searchBar input[type="search"]{
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+}   
+
+h1{
+    color: rgb(38, 70, 83);
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+
+h2{
+    color: rgb(38, 70, 83);
+    font-size: 2rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 2.0rem ;
+}
+
+.float-container{
+    position: float;
+    
+}
+
+.float-text{
+    position: relative;
+    bottom: 40px;
+    left: 100px;
+    color: white;
+}
+
+
+/* CSS for Categories */
+
+.foodCategories{
+    padding: 2% 0;
+}
+
+.box-6{
+    border: 1px solid black;
+    width: 47%;
+    float: left;
+    margin: 1%; 
+}
+
+/* CSS for FOOD Menu */
+
+.food-menu{
+    background-color: rgb(233, 196, 106);
+    padding: 4% 0;
+}
+
+.food-menu-box{
+    border: 1px, solid, black;
+    width: 45%;
+    margin: 1%;
+    float: left;
+    padding: 1%;
+}
