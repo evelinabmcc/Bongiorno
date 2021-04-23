@@ -1,0 +1,70 @@
+/*
+    Authors: Ryan Paul, 
+             Taruna Mangar,
+             Evelina Iliescu-Nastasiu.
+
+     Theme:  Restaurant Online Food Ordering  
+
+     Project: Admin CSS Style Sheet
+     
+     Date: 04.10.21
+*/
+
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.wrapper{
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+/* CSS for Menu */
+.menu{
+    text-align: center;
+    border-bottom: 1px solid rgb(4, 50, 4);
+}
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li{
+    display: inline;
+    padding: 1%;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    /* color: green */
+}
+
+/* CSS for Main Content */
+.main-content{
+    margin: 2% 0;
+    background-color: rgb(233, 196, 106);;
+}
+
+
+
+/* CSS for Footer */
+.footer{
+    background-color: rgb(227, 69, 69);
+}
+
+a{
+    color:rgb(12, 73, 12);
+    text-decoration: none;
+}
+
+a:hover{
+    color: green;
+}
