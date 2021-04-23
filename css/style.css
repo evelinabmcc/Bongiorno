@@ -21,7 +21,7 @@
 }
 
 .container{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 80%;
     margin: 0 auto;
     padding: 1%;
@@ -70,54 +70,13 @@ a:hover{
     background-color: rgb(12, 73, 12) ;
     color: white;
     cursor: pointer;
-    border-radius: 5%;
+    border-radius: 10%;
 }
+
 
 .button:hover{
     color: green;
 }
-
-
-/* CSS for Navbar Section*/
-
-.logo{
-    border: 1px solid rgb(10, 17, 31);
-    width: 15%;
-    float: left;
-}
-
-.menu{
-    line-height: 130px;  
-}
-
-.menu ul{
-     list-style-type: none;
-}
-
-.menu ul li{
-    display: inline; 
-    padding: 1%; 
-    font-weight: bold;
-}
-
-
-/* CSS for Search Bar Section */
-
- .searchBar{
-    background-image: url(../images/background/Background-Pasta.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;    
-    background-position: center; 
-    padding: 7% 0;
-    border-radius: 5%;
-}
-
-.searchBar input[type="search"]{
-    width: 50%;
-    padding: 1%;
-    font-size: 1rem;
-    border: none;
-}   
 
 h1{
     color: rgb(75, 20, 20);
@@ -137,28 +96,74 @@ h3{
     font-size: 2.0rem ;
 }
 
+/* CSS for Navbar Section*/
+
+.logo{
+    width: 15%;
+    float: left; 
+}
+
+.menu{
+    line-height: 130px;  
+}
+
+.menu ul{
+     list-style-type: none;
+}
+
+.menu ul li{
+    display: inline; 
+    padding: 1%; 
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
 .float-container{
-    position: float;
+    position: relative;
     
 }
 
 .float-text{
-    position: relative;
-    bottom: 40px;
-    left: 100px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 35px;
+    left: 0px;
     color: white;
 }
+
+
+
+/* CSS for Search Bar Section */
+
+ .searchBar{
+    background-image: url(../images/background/Background-Pasta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;    
+    background-position: center; 
+    padding: 5% 0;
+}
+
+.searchBar input[type="search"]{
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+}   
+
 
 
 /* CSS for Categories */
 
 .foodCategories{
-    padding: 2% 0;
+    padding: 3% 0;
 }
 
 .box-6{
-    border: 1px solid black;
     width: 47%;
+    /* display: flex; */
     float: left;
     margin: 1%; 
 }
@@ -168,12 +173,12 @@ h3{
 
 .food-menu{
     background-color: rgb(233, 196, 106);
-    padding: 2% 0;
+    padding: 3% 0;
 }
 
 .food-menu-box{
-    border: 1px, solid, black;
     width: 20%;
+    height: 350px;
     margin: 1%;
     float: left;
     padding: 1%;
@@ -186,7 +191,49 @@ h3{
     float: left;
 }
 
+.food-menu-desc{
+    width: 95%;
+    float: left;
+    margin-top: 5%;
+    /* margin-left: 5%; */
+    text-align: center;
+}
 
+.food-price{
+    font-size: 1.2rem;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* CSS for Social Media */
+
+.socialMedia ul{
+    list-style-type: none;
+}
+
+.socialMedia ul{
+    display: inline;
+    padding: 0.5%;
+}
+
+
+/* CSS for Mobile Size or Smaller Screen */
+@media only screen and (max-width:768px){
+    .logo{
+        /* padding-top: 5%; */
+        width: 60%;
+        float: none;
+        margin: 0% auto;
+    }  
+    
+    .menu ul{
+        text-align: center;
+    }
+}
+    
 
 /* CSS FOR LOGIN PAGE  */
 
@@ -263,4 +310,4 @@ span.psw {
     .cancelbtn {
         width: 100%;
     }
-} */
+} 
