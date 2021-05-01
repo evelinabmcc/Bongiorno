@@ -135,7 +135,6 @@ h3{
 }
 
 
-
 /* CSS for Search Bar Section */
 
  .searchBar{
@@ -163,7 +162,6 @@ h3{
 
 .box-6{
     width: 47%;
-    /* display: flex; */
     float: left;
     margin: 1%; 
 }
@@ -206,6 +204,9 @@ h3{
     text-align: center;
     font-weight: bold;
 }
+
+
+/* CSS for Our Statement Section */
 
 
 /* CSS for Social Media */

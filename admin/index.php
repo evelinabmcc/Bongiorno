@@ -1,51 +1,52 @@
-<html>
-    <head>
-        <title> Bongiorno - Home Page</title>
+<!-- 
+    Authors: Ryan Paul, 
+             Taruna Mangar,
+             Evelina Iliescu-Nastasiu.
 
-        <link rel="stylesheet" href="../css/admin.css">
-    </head>   
+     Theme:  Restaurant Online Food Ordering  
 
+     Project: Admin Panel: 'index.php'
+     
+     Date: 04.10.21
+-->
 
-    <body>
-        <!-- Menu Section starts here -->
-        <div class="menu">
-            <div class="wrapper">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Admin</a></li>
-                    <li><a href="#">Category</a></li>
-                    <li><a href="#">Food</a></li>
-                    <li><a href="#">Order</a></li>
-
-                </ul>
-            </div>
-        </div>
-        <!-- Menu Section ends here -->
+<?php include('reusable-code/navbar-section.php'); ?>
 
 
         <!-- Dashboard Section starts here -->
-        <div class="main-content">
+        <section class="main-content">
             <div class="wrapper">
-                 <strong>DASHBOARD</strong>
+                 <h3>DASHBOARD:</h3>
+                 
+
+                 <div class="box-4 text-center">
+                     <h2>5</h2>
+                     Categories
+                 </div>
+                <br>
+
+                 <div class="box-4 text-center">
+                     <h2>5</h2>
+                     Categories
+                 </div>
+                <br>
+
+                 <div class="box-4 text-center">
+                     <h2>5</h2>
+                     Categories
+                 </div>
+                <br>
+
+                 <div class="box-4 text-center">
+                     <h2>5</h2>
+                     Categories
+                 </div>
+                
+                 <div class="clearfix"></div>
 
             </div>
-        </div>
+        </section>
         <!-- Dashboard Section ends here -->
 
 
-        <!-- Footer Section starts here -->
-        <div class="footer">
-            <div class="wrapper">
-            <p class="text-center">
-                    All rights reserved. 
-                    Designed by <a href="#">Ryan Paul, </a>
-                                <a href="#">Taruna Mangar, and </a> 
-                                <a href="#">Evelina Iliescu-Nastasiu.</a>
-                </p>
-            </div>  
-        </div>
-        <!-- Footer Section ends here -->        
-
-    </body>
-
-</html>
+        <?php include('reusable-code/footer-section.php'); ?>

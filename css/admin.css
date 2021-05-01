@@ -5,7 +5,7 @@
 
      Theme:  Restaurant Online Food Ordering  
 
-     Project: Admin CSS Style Sheet
+     Project: Admin Panel: CSS Style Sheet
      
      Date: 04.10.21
 */
@@ -18,16 +18,24 @@
 
 .wrapper{
     padding: 1%;
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
+    margin: 1 auto;
 }
 
 .text-center{
     text-align: center;
 }
 
+a{
+    color:rgb(12, 73, 12);
+    text-decoration: none;
+}
 
-/* CSS for Menu */
+.clearfix{
+    float: none;
+    clear: both;
+}
+/* CSS for Admin Menu */
 .menu{
     text-align: center;
     border-bottom: 1px solid rgb(4, 50, 4);
@@ -38,21 +46,28 @@
 
 .menu ul li{
     display: inline;
-    padding: 1%;
+    padding: 2%;
 }
 
 .menu ul li a{
     text-decoration: none;
     font-weight: bold;
-    /* color: green */
 }
 
-/* CSS for Main Content */
+/* CSS for Dashboard */
 .main-content{
-    margin: 2% 0;
-    background-color: rgb(233, 196, 106);;
+    /* margin:2%; */
+    padding: 2% 0;
+    background-color: rgb(233, 196, 106);
 }
 
+.box-4{
+    width: 15%;
+    background-color: white;
+    margin: 1.5%;
+    padding: 2%;
+    float:left; 
+}
 
 
 /* CSS for Footer */
@@ -60,10 +75,6 @@
     background-color: rgb(227, 69, 69);
 }
 
-a{
-    color:rgb(12, 73, 12);
-    text-decoration: none;
-}
 
 a:hover{
     color: green;

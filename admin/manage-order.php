@@ -5,7 +5,7 @@
 
      Theme:  Restaurant Online Food Ordering  
 
-     Project: Admin Panel: 'manage-admin.php'
+     Project: Admin Panel: 'manage-order.php'
      
      Date: 04.10.21
 -->
@@ -16,7 +16,7 @@
         <!-- Main Content Section starts here -->
         <section class="main-content">
             <div class="wrapper">
-                 <h3> Manage Admin: </h3>
+                 <h3> Manage Order: </h3>
                 
                  <!-- Add Code -->
                  <!-- Add Code -->
