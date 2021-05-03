@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 23, 2021 at 01:29 PM
+-- Generation Time: May 03, 2021 at 11:10 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -43,7 +43,8 @@ CREATE TABLE `admin` (
 CREATE TABLE `course` (
   `course_id` mediumint(8) UNSIGNED NOT NULL,
   `course_title` varchar(20) NOT NULL,
-  `availability` datetime NOT NULL
+  `availability` varchar(10) NOT NULL,
+  `image_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
