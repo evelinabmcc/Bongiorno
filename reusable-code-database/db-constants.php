@@ -2,6 +2,13 @@
 
 // Contains constants used for Query Execution and updating the Database
 
+    //Start Session
+    session_start();
+
+
+    //Create Constants to Store Non Repeating Values
+    define('SITEURL', 'http://localhost/bongiorno/');
+
 define('LOCALHOST', 'localhost'); // default localhost
 define('DB_USERNAME', 'root'); // default db username
 define('DB_PASSWORD', ''); // default db password ''
