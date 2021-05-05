@@ -23,25 +23,22 @@
                      <h2>5</h2>
                      Categories
                  </div>
-                <br>
 
                  <div class="box-4 text-center">
                      <h2>5</h2>
                      Categories
                  </div>
-                <br>
 
                  <div class="box-4 text-center">
                      <h2>5</h2>
                      Categories
                  </div>
-                <br>
 
                  <div class="box-4 text-center">
                      <h2>5</h2>
                      Categories
                  </div>
-                
+
                  <div class="clearfix"></div>
 
             </div>
