@@ -1,11 +1,7 @@
 <!-- NavBar Menu code to be reused across ADMIN PANEL files -->
 
-<?php 
-
-    include('../reusable-code-database/db-constants.php'); 
-    include('login-check.php');
-
-?>
+<!-- Insert database configuration, reusable code -->
+<!-- ... -->
 
 
 
