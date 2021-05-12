@@ -17,10 +17,10 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.wrapper {
-  padding: 1%;
-  width: 90%;
-  margin: 1 auto;
+.wrapper{
+    padding: 2%;
+    width: 90%;
+    margin: 1 auto;
 }
 
 .text-center {
@@ -113,11 +113,10 @@ table tr td {
   font-weight: bold;
 }
 
-/* CSS for Dashboard */
-.main-content {
-  /* margin:2%; */
-  padding: 2% 0;
-  background-color: rgb(233, 196, 106);
+/* CSS for Admin Dashboard */
+.main-content{
+    padding: 2% 0;
+    background-color: rgb(233, 196, 106);
 }
 
 .box-4 {
