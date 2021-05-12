@@ -10,72 +10,137 @@
      Date: 04.10.21
 */
 
-*{
-    margin: 0 0;
-    padding: 0 0;
-    font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+* {
+  margin: 0 0;
+  padding: 0 0;
+  font-family: "Lato", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.wrapper{
-    padding: 1%;
-    width: 90%;
-    margin: 1 auto;
+.wrapper {
+  padding: 1%;
+  width: 90%;
+  margin: 1 auto;
 }
 
-.text-center{
-    text-align: center;
+.text-center {
+  text-align: center;
 }
 
-a{
-    color:rgb(12, 73, 12);
-    text-decoration: none;
+a {
+  color: rgb(12, 73, 12);
+  text-decoration: none;
 }
 
-.clearfix{
-    float: none;
-    clear: both;
+.clearfix {
+  float: none;
+  clear: both;
 }
+
+.tbl-full {
+  width: 100%;
+}
+.tbl-30 {
+  width: 30%;
+}
+
+table tr th {
+  border-bottom: 1px solid black;
+  padding: 1%;
+  text-align: left;
+}
+
+table tr td {
+  padding: 1%;
+}
+
+.btn-primary {
+  background-color: #1e90ff;
+  padding: 1%;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-primary:hover {
+  background-color: #3742fa;
+}
+
+.btn-secondary {
+  background-color: #7bed9f;
+  padding: 1%;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-secondary:hover {
+  background-color: #2ed573;
+}
+
+.btn-danger {
+  background-color: #ff6b81;
+  padding: 1%;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-danger:hover {
+  background-color: #ff4757;
+}
+
+.success {
+  color: #2ed573;
+}
+.error {
+  color: #ff4757;
+}
+
 /* CSS for Admin Menu */
-.menu{
-    text-align: center;
-    border-bottom: 1px solid rgb(4, 50, 4);
+.menu {
+  text-align: center;
+  border-bottom: 1px solid rgb(4, 50, 4);
 }
-.menu ul{
-    list-style-type: none;
-}
-
-.menu ul li{
-    display: inline;
-    padding: 2%;
+.menu ul {
+  list-style-type: none;
 }
 
-.menu ul li a{
-    text-decoration: none;
-    font-weight: bold;
+.menu ul li {
+  display: inline;
+  padding: 2%;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* CSS for Dashboard */
-.main-content{
-    /* margin:2%; */
-    padding: 2% 0;
-    background-color: rgb(233, 196, 106);
+.main-content {
+  /* margin:2%; */
+  padding: 2% 0;
+  background-color: rgb(233, 196, 106);
 }
 
-.box-4{
-    width: 15%;
-    background-color: white;
-    margin: 1.5%;
-    padding: 2%;
-    float:left; 
+.box-4 {
+  width: 15%;
+  background-color: white;
+  margin: 1.5%;
+  padding: 2%;
+  float: left;
 }
-
 
 /* CSS for Footer */
-.footer{
-    background-color: rgb(227, 69, 69);
+.footer {
+  background-color: rgb(227, 69, 69);
 }
 
+a:hover {
+  color: green;
+}
 
-a:hover{
-    color: green;
+/* CSS for Login */
+.login {
+  border: 1px solid grey;
+  width: 20%;
+  margin: 10% auto;
+  padding: 2%;
 }

@@ -10,7 +10,7 @@
      Date: 04.10.21
 -->
 
-<?php include('reusable-code/navbar-section.php'); ?>
+<?php include('reusable-code-admin/navbar-section.php'); ?>
 
 
         <!-- Dashboard Section starts here -->
@@ -49,4 +49,4 @@
         <!-- Dashboard Section ends here -->
 
 
-        <?php include('reusable-code/footer-section.php'); ?>
+        <?php include('reusable-code-admin/footer-section.php'); ?>
