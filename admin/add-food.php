@@ -10,6 +10,8 @@
 
 <?php include('reusable-code-admin/navbar-section.php'); ?>
 
+<?php include('partials/menu.php'); ?>
+
 <div class="main-content">
     <div class="wrapper">
         <h1>Add Food</h1>
@@ -57,14 +59,14 @@
                 </tr>
 
                 <tr>
-                    <td>Course: </td>
+                    <td>Category: </td>
                     <td>
-                        <select name="course">
+                        <select name="category">
 
                             <?php 
                                 //Create PHP Code to display categories from Database
                                 //1. CReate SQL to get all active categories from database
-                                $sql = "SELECT * FROM course WHERE availability='Yes'";
+                                $sql = "SELECT * FROM category WHERE active='Yes'";
                                 
                                 //Executing qUery
                                 $res = mysqli_query($con, $sql);
@@ -79,8 +81,8 @@
                                     while($row=mysqli_fetch_assoc($res))
                                     {
                                         //get the details of categories
-                                        $id = $row['course_id'];
-                                        $title = $row['course_title'];
+                                        $id = $row['id'];
+                                        $title = $row['title'];
 
                                         ?>
 
@@ -93,7 +95,7 @@
                                 {
                                     //WE do not have category
                                     ?>
-                                    <option value="0">No Course Found</option>
+                                    <option value="0">No Category Found</option>
                                     <?php
                                 }
                             
@@ -105,9 +107,16 @@
                     </td>
                 </tr>
 
-                
                 <tr>
-                    <td>Availability: </td>
+                    <td>Featured: </td>
+                    <td>
+                        <input type="radio" name="featured" value="Yes"> Yes 
+                        <input type="radio" name="featured" value="No"> No
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Active: </td>
                     <td>
                         <input type="radio" name="active" value="Yes"> Yes 
                         <input type="radio" name="active" value="No"> No
@@ -137,12 +146,21 @@
                 $title = $_POST['title'];
                 $description = $_POST['description'];
                 $price = $_POST['price'];
-                $course = $_POST['course'];
+                $category = $_POST['category'];
 
-                //Check whether radion button for availbility are checked or not
-                if(isset($_POST['availability']))
+                //Check whether radion button for featured and active are checked or not
+                if(isset($_POST['featured']))
                 {
-                    $availability = $_POST['availability'];
+                    $featured = $_POST['featured'];
+                }
+                else
+                {
+                    $featured = "No"; //SEtting the Default Value
+                }
+
+                if(isset($_POST['active']))
+                {
+                    $active = $_POST['active'];
                 }
                 else
                 {
@@ -207,12 +225,13 @@
                     description = '$description',
                     price = $price,
                     image_name = '$image_name',
-                    course_id = $course,
-                    availability = '$availability',
+                    id = $category,
+                    featured = '$featured',
+                    active = '$active'
                 ";
 
                 //Execute the Query
-                $res2 = mysqli_query($conn, $sql2);
+                $res2 = mysqli_query($con, $sql2);
 
                 //CHeck whether data inserted or not
                 //4. Redirect with MEssage to Manage Food page
@@ -220,13 +239,13 @@
                 {
                     //Data inserted Successfullly
                     $_SESSION['add'] = "<div class='success'>Food Added Successfully.</div>";
-                    header('location:manage-food.php');
+                    header('location:http://localhost/Bongiorno/admin/manage-food.php');
                 }
                 else
                 {
                     //FAiled to Insert Data
                     $_SESSION['add'] = "<div class='error'>Failed to Add Food.</div>";
-                    header('location:manage-food.php');
+                    header('location:http://localhost/Bongiorno/admin/manage-food.php');
                 }
 
                 
@@ -237,13 +256,8 @@
 
     </div>
 </div>
-
-<?php include('partials/footer.php'); ?>
-
-
-            </div>
-        </section>
-        <!-- Main Content Section ends here -->
+    
 
 
 <?php include('reusable-code-admin/footer-section.php'); ?>
+

@@ -3,7 +3,12 @@
 <!-- Insert database configuration, reusable code -->
 <!-- ... -->
 
+<?php 
 
+    include('../reusable-code-database/db-constants.php'); 
+    include('login-check.php');
+
+?>
 
 <html>
     <head>
