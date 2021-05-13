@@ -1,25 +1,26 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.7
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 10, 2021 at 07:19 PM
--- Server version: 5.7.32
--- PHP Version: 7.4.12
+-- Generation Time: May 13, 2021 at 02:20 PM
+-- Server version: 5.7.24
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
---
--- Database: `evelina`
---
-CREATE DATABASE IF NOT EXISTS `evelina` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `evelina`;
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
 -- Database: `foodwebsite`
 --
-CREATE DATABASE IF NOT EXISTS `foodwebsite` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `foodwebsite`;
 
 -- --------------------------------------------------------
 
@@ -32,14 +33,6 @@ CREATE TABLE `admin` (
   `admin_username` varchar(100) NOT NULL,
   `admin_password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`admin_id`, `admin_username`, `admin_password`) VALUES
-(1, 'evelina', '5f4dcc3b5aa765d61d8327deb882cf99'),
-(2, 'taruna', '5f4dcc3b5aa765d61d8327deb882cf99');
 
 -- --------------------------------------------------------
 
@@ -60,7 +53,7 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `title`, `featured`, `active`, `image_name`) VALUES
-(1, 'breakfast', 'No', 'No', 'Food_Category_139.jpg');
+(10, 'Brunch ', 'Yes', 'Yes', 'Food_Category_689.jpg');
 
 -- --------------------------------------------------------
 
@@ -86,13 +79,21 @@ CREATE TABLE `customer` (
 
 CREATE TABLE `food` (
   `item_num` mediumint(8) UNSIGNED NOT NULL,
-  `course_id` mediumint(8) UNSIGNED NOT NULL,
+  `id` mediumint(8) UNSIGNED NOT NULL,
   `title` varchar(100) NOT NULL,
   `image_name` varchar(255) NOT NULL,
   `description` varchar(100) NOT NULL,
-  `price` float(4,2) NOT NULL,
-  `availability` varchar(10) NOT NULL
+  `price` double(4,2) NOT NULL,
+  `featured` varchar(10) NOT NULL,
+  `active` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `food`
+--
+
+INSERT INTO `food` (`item_num`, `id`, `title`, `image_name`, `description`, `price`, `featured`, `active`) VALUES
+(7, 10, 'Pizza', 'Food-Name-8439.jpeg', 'Cheese', 6.00, 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -137,7 +138,7 @@ ALTER TABLE `customer`
 --
 ALTER TABLE `food`
   ADD PRIMARY KEY (`item_num`),
-  ADD KEY `course_id` (`course_id`);
+  ADD KEY `id` (`id`) USING BTREE;
 
 --
 -- Indexes for table `orders`
@@ -155,13 +156,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `admin_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `customer`
@@ -173,7 +174,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `item_num` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `item_num` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -189,7 +190,7 @@ ALTER TABLE `orders`
 -- Constraints for table `food`
 --
 ALTER TABLE `food`
-  ADD CONSTRAINT `food_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `category` (`id`);
+  ADD CONSTRAINT `food_ibfk_1` FOREIGN KEY (`id`) REFERENCES `category` (`id`);
 
 --
 -- Constraints for table `orders`
@@ -197,3 +198,8 @@ ALTER TABLE `food`
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`),
   ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`item_num`) REFERENCES `food` (`item_num`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
