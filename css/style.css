@@ -5,7 +5,7 @@
 
      Theme:  Restaurant Online Food Ordering  
 
-     Project: General Front CSS Style Sheet
+     Project: General Front for Admin CSS Style Sheet
      
      Date: 04.10.21
 */
@@ -29,7 +29,7 @@
 }
 
 .img-responsive {
-  width: 1000%;
+  width: 100%;
 }
 
 .img-curve {
@@ -123,7 +123,7 @@ h3 {
 .float-text {
   position: absolute;
   text-align: center;
-  width: 100%;
+  width: 80%;
   bottom: 35px;
   left: 0px;
   color: white;
@@ -148,17 +148,14 @@ h3 {
 
 /* CSS for Categories */
 
-.food-categories {
-  background-color: rgb(233, 196, 106);
+.foodCategories {
   padding: 3% 0;
 }
 
 .box-6 {
-  width: 40%;
-  max-height: 100px;
+  width: 30%;
   float: left;
   margin: 1%;
-  /* overflow: hidden; */
 }
 
 /* CSS for FOOD Menu */
