@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 03, 2021 at 11:10 AM
+-- Generation Time: May 13, 2021 at 02:20 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -37,15 +37,23 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `course`
+-- Table structure for table `category`
 --
 
-CREATE TABLE `course` (
-  `course_id` mediumint(8) UNSIGNED NOT NULL,
-  `course_title` varchar(20) NOT NULL,
-  `availability` varchar(10) NOT NULL,
+CREATE TABLE `category` (
+  `id` mediumint(8) UNSIGNED NOT NULL,
+  `title` varchar(20) NOT NULL,
+  `featured` varchar(10) NOT NULL,
+  `active` varchar(10) NOT NULL,
   `image_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `title`, `featured`, `active`, `image_name`) VALUES
+(10, 'Brunch ', 'Yes', 'Yes', 'Food_Category_689.jpg');
 
 -- --------------------------------------------------------
 
@@ -71,12 +79,21 @@ CREATE TABLE `customer` (
 
 CREATE TABLE `food` (
   `item_num` mediumint(8) UNSIGNED NOT NULL,
-  `course_id` mediumint(8) UNSIGNED NOT NULL,
+  `id` mediumint(8) UNSIGNED NOT NULL,
   `title` varchar(100) NOT NULL,
-  `image` longblob NOT NULL,
+  `image_name` varchar(255) NOT NULL,
   `description` varchar(100) NOT NULL,
-  `price` float(4,2) NOT NULL
+  `price` double(4,2) NOT NULL,
+  `featured` varchar(10) NOT NULL,
+  `active` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `food`
+--
+
+INSERT INTO `food` (`item_num`, `id`, `title`, `image_name`, `description`, `price`, `featured`, `active`) VALUES
+(7, 10, 'Pizza', 'Food-Name-8439.jpeg', 'Cheese', 6.00, 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -105,10 +122,10 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`admin_id`);
 
 --
--- Indexes for table `course`
+-- Indexes for table `category`
 --
-ALTER TABLE `course`
-  ADD PRIMARY KEY (`course_id`);
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `customer`
@@ -121,7 +138,7 @@ ALTER TABLE `customer`
 --
 ALTER TABLE `food`
   ADD PRIMARY KEY (`item_num`),
-  ADD KEY `course_id` (`course_id`);
+  ADD KEY `id` (`id`) USING BTREE;
 
 --
 -- Indexes for table `orders`
@@ -139,13 +156,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `admin_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `course`
+-- AUTO_INCREMENT for table `category`
 --
-ALTER TABLE `course`
-  MODIFY `course_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `category`
+  MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `customer`
@@ -157,7 +174,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `item_num` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `item_num` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -173,7 +190,7 @@ ALTER TABLE `orders`
 -- Constraints for table `food`
 --
 ALTER TABLE `food`
-  ADD CONSTRAINT `food_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`);
+  ADD CONSTRAINT `food_ibfk_1` FOREIGN KEY (`id`) REFERENCES `category` (`id`);
 
 --
 -- Constraints for table `orders`
